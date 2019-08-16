@@ -3,7 +3,7 @@ Star Wars ClI Project
 
 # If not installed already
 - Install pip
-- pip install virtualenv
+- run $pip install virtualenv
 
 # Commands to get project up and running
 $ virtualenv venv
