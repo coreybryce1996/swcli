@@ -7,4 +7,6 @@ pip install virtualenv
 
 virtualenv venv
 
+venv\scripts\activate
+
 python setup.py install
