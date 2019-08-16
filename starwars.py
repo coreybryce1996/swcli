@@ -41,17 +41,19 @@ starship_params = ["MGLT",
 "url"]
 
 def filter_json(json, return_params):
-    json = json['results']
+    if return_params:
+        json = json['results']
 
-    filtered_json = []
-    for element in json:
-        new_element = {}
-        for key in element:
-            if key in return_params:
-                new_element[key] = element[key]
-        filtered_json.append(new_element)
-                
-    return filtered_json
+        filtered_json = []
+        for element in json:
+            new_element = {}
+            for key in element:
+                if key in return_params:
+                    new_element[key] = element[key]
+            filtered_json.append(new_element)
+                    
+        return filtered_json
+    return json
 
 def get_all_starships(starship_base_url):
     result_json = requests.get(starship_base_url).json()
