@@ -7,7 +7,8 @@ setup(
     py_modules=['starwars'],
     install_requires=[
         'Click',
-        'requests'
+        'requests',
+        '--editable .'
     ],
     entry_points='''
         [console_scripts]
