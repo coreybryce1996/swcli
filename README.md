@@ -6,8 +6,13 @@ Star Wars ClI Project
 - pip install virtualenv
 
 # Commands to get project up and running
-- virtualenv venv
+$ virtualenv venv
 
-- venv\scripts\activate
+$ venv\scripts\activate
 
-- pip install --editable .
+$ pip install --editable .
+
+# Example Commands
+
+$ starwars starships -s falcon
+
