@@ -9,4 +9,4 @@ virtualenv venv
 
 venv\scripts\activate
 
-python setup.py install
+pip install --editable .
