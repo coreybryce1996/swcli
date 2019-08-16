@@ -41,8 +41,9 @@ starship_params = ["MGLT",
 "url"]
 
 def filter_json(json, return_params):
+    json = json['results']
+
     if return_params:
-        json = json['results']
 
         filtered_json = []
         for element in json:
