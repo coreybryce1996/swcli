@@ -1,12 +1,18 @@
 # swcli
 Star Wars ClI Project
 
-Install pip if you do not have it
+# If not installed already
+- Install pip
+- run $pip install virtualenv
 
-pip install virtualenv
+# Commands to get project up and running
+$ virtualenv venv
 
-virtualenv venv
+$ venv\scripts\activate
 
-venv\scripts\activate
+$ pip install --editable .
 
-pip install --editable .
+# Example Commands
+
+$ starwars starships -s falcon
+
