@@ -108,14 +108,12 @@ def starships(config, list, filter_params, search, return_params):
     --rp to specify what parameters user would like returned for each Starship. 
      """
 
+    
     starship_base_url = config.base_url + '/starships/'
 
     if list:
-        use_cached = False
-
         """ If cache file is in directory, set flag to use it. """
-        if os.path.exists(cache_file):
-            use_cached = True
+        use_cached = os.path.exists(cache_file)
         handle_list(starship_base_url, filter_params, return_params, use_cached)
 
     elif search:

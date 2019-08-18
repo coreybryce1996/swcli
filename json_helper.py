@@ -47,15 +47,12 @@ def clean_json(json, return_params):
     for element in json:
         new_element = {}
         for key in element:
-            if return_params:
-                if key in return_params:
-                    value = element[key]
-                    new_element[key] = clean_value(value, key)
-            else:
+            if (return_params is None) or (key in return_params):
                 value = element[key]
                 new_element[key] = clean_value(value, key)
+
         cleaned_json.append(new_element)
-                
+
     return cleaned_json
 
 def filter_json(json, param, param_range):
